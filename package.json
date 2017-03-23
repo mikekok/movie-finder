@@ -2,6 +2,7 @@
   "name": "Movie-Finder",
   "version": "1.0.0",
   "description": "A simple movie finder built on Electron",
+  "repository": "mikekok/movie-finder",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js"
