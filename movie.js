@@ -67,9 +67,9 @@ $(document).ready(function() {
 });
 
 function GetStars(rating) {
-    var filled = '<i class="fa fa-star">';
-    var half = '<i class="fa fa-star-half-o">';
-    var empty = '<i class="fa fa-star-o">';
+    var filled = '<i class="fa fa-star"></i>';
+    var half = '<i class="fa fa-star-half-o"></i>';
+    var empty = '<i class="fa fa-star-o"></i>';
 
     var filledStars = Math.floor(rating / 2);
     var emptyStars = 5 - filledStars;
