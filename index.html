@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Finder</title>
+
+    <!-- Custom CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="./assets/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="status"><img src="./assets/img/search.png"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="header">
+                    <div class="wincontrols">
+                        <div class="wincontrol winclose"></div>
+                        <div class="wincontrol winmax"></div>
+                        <div class="wincontrol winmini"></div>
+                    </div>
+                    <div class="title">Movie Finder</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="search-box">
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="Search for a movie title..." autofocus>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option value="movie">Movies</option>
+                                <option value="series">Series</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="movies" class="col-sm-12">
+                <!-- <div class="col-sm-3 col-xs-4">
+                    <div class="movie">
+                        <img src="https://placehold.it/200x300" class="img-responsive img-thumbnail undraggable">
+                        <div class="overlay">
+                            <span id="plus">+</span>
+                        </div>
+                        <div class="name">Moana</div>
+                        <div class="year">2017</div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+    }
+</script>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/axios.min.js"></script>
+<script src="renderer.js"></script>
+<script>
+    if (window.module) module = window.module;
+</script>
+
+</html>

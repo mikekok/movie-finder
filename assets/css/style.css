@@ -1,0 +1,328 @@
+body {
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    user-select: none;
+    background: linear-gradient(135deg, #ff00cc 0%, #333399 100%);
+}
+
+html {
+    height: 100%;
+}
+
+
+/* Loader */
+
+.loader {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 560px;
+    z-index: 9999;
+    background: url('../img/loader2.gif') center no-repeat #fff;
+}
+
+
+/* Header */
+
+.header {
+    margin: 0 -15px;
+    background-color: #212121;
+    text-align: center;
+    height: 40px;
+    font-size: 13px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+}
+
+.header .back {
+    position: absolute;
+    line-height: 40px;
+    left: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    -webkit-app-region: no-drag;
+}
+
+.header .back:hover {
+    opacity: 0.7;
+}
+
+.header .wincontrols {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.wincontrols .wincontrol {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 6px;
+    cursor: pointer;
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 10px;
+    -webkit-app-region: no-drag;
+    transition: all 0.2s ease-out;
+}
+
+.wincontrols .wincontrol.winclose {
+    background-color: #DE7345;
+}
+
+.wincontrols .wincontrol.winclose:hover:before {
+    content: "\f00d";
+}
+
+.wincontrols .wincontrol.winmax {
+    background-color: #E0AB17;
+}
+
+.wincontrols .wincontrol.winmax:hover:before {
+    content: "\f067";
+}
+
+.wincontrols .wincontrol.winmini {
+    background-color: #91C225;
+}
+
+.wincontrols .wincontrol.winmini:hover:before {
+    content: "\f068";
+}
+
+
+/* SearchBox */
+
+.search-box {
+    padding: 0 20px;
+    height: 80px;
+    margin: 0 -15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box input[type=text].form-control {
+    outline: none;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent;
+    color: #fff;
+    font-size: 22px;
+}
+
+.search-box .form-control::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.search-box select.form-control {
+    outline: none;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 12px;
+}
+
+option {
+    color: #212121;
+}
+
+
+/* Movies */
+
+
+.status {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    opacity: 0.2;
+}
+
+#movies {
+    padding: 25px 15px;
+    overflow-y: auto;
+    height: 480px;
+}
+
+#movies::-webkit-scrollbar {
+    width: 10px;
+}
+
+#movies::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#movies::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.movie {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.movie img {
+    height: 260px;
+}
+
+.movie:hover img {
+    opacity: 0.9;
+}
+
+.movie .name {
+    font-size: 16px;
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie .year {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* Single Movie */
+
+.single-movie {
+    display: flex;
+    align-items: center;
+}
+
+.single-movie img {
+    height: 500px;
+}
+
+.single-movie .details {}
+
+.single-movie .details .title {
+    font-size: 26px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.single-movie .details .year {
+    color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.single-movie .details .genre {
+    color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.single-movie .details .rating {
+    color: #EFCE4A;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.single-movie .details .director {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: none;
+}
+
+.single-movie .details .director span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.single-movie .details .writer {
+    margin-top: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.single-movie .details .writer span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.single-movie .details .actors {
+    margin-top: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.single-movie .details .actors span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.single-movie .details .plot {
+    margin: 20px 0;
+    display: none;
+}
+
+.single-movie .details .imdb {
+    margin-top: 20px;
+}
+
+.single-movie .details .imdb span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.single-movie .details .imdb span.rate {
+    font-size: 12px;
+}
+
+.single-movie .details .metascore {
+    margin-top: 6px;
+}
+
+.single-movie .details .metascore span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.single-movie .details .metascore span.rate {
+    font-size: 12px;
+}
+
+.single-movie .details .btn-imdb {
+    margin-top: 20px;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #212121;
+    background-color: #EFCE4A;
+    transition: all 0.2s ease-out;
+}
+
+.single-movie .details .btn-imdb:hover, .single-movie .details .btn-imdb:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: #fff;
+}
+
+
+/* General */
+
+.undraggable {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

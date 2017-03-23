@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Finder</title>
+
+    <!-- Custom CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="./assets/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="loader"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="header">
+                    <div class="back"><i class="fa fa-chevron-left"></i></div>
+                    <div class="wincontrols">
+                        <div class="wincontrol winclose"></div>
+                        <div class="wincontrol winmax"></div>
+                        <div class="wincontrol winmini"></div>
+                    </div>
+                    <div class="title"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="cursor:default;padding-top:30px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="single-movie">
+                    <div class="col-sm-6">
+                        <img id="poster" class="img-responsive img-thumbnail center-block undraggable">
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="details">
+                            <div class="title"></div>
+                            <div class="year"></div>
+                            <div class="genre"></div>
+                            <div class="rating"></div>
+
+                            <div class="plot"></div>
+
+                            <div class="director"></div>
+                            <div class="writer"></div>
+                            <div class="actors"></div>
+
+                            <div class="imdb"></div>
+                            <div class="metascore"></div>
+
+                            <button class="btn btn-imdb" type="button">IMDB</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+    }
+</script>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/axios.min.js"></script>
+<script src="movie.js"></script>
+<script>
+    if (window.module) module = window.module;
+</script>
+
+</html>
